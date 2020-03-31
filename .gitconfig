@@ -1,0 +1,16 @@
+[user]
+	name = Eva Fineberg
+	email = eva.fineberg@gmail.com
+	username = bineferg
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+[core]
+	editor = /usr/bin/vim -f
