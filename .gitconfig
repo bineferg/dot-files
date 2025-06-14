@@ -1,16 +1,53 @@
 [user]
-	name = Eva Fineberg
-	email = eva.fineberg@gmail.com
-	username = bineferg
+  name = Eva Fineberg
+  email = bineferg@gmail.com
+  username = bineferg
+
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
+
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	visual = !gitk
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  visual = !gitk
+  lol = log --oneline --graph --decorate --all
+  amend = commit --amend --no-edit
+  hist = log --pretty=format:'%C(yellow)%h%Creset %ad | %s%Cgreen%d %Cblue[%an]' --graph --date=short
+  root = rev-parse --show-toplevel
+  wipe = !git reset --hard && git clean -fd
+
 [core]
-	editor = /usr/bin/vim -f
+  editor = /usr/bin/vim -f
+  pager = delta
+  autocrlf = input
+
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+
+[diff]
+  tool = vimdiff
+  colorMoved = default
+
+[init]
+  defaultBranch = main
+
+[push]
+  default = simple
+
+[pull]
+  rebase = true
+
+[color]
+  ui = auto
+
+[credential]
+  helper = osxkeychain
+
+[rerere]
+  enabled = true
+
